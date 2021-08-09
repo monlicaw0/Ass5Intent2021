@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/txt_regis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Employee Form"
+        android:textSize="30sp" />
+    <TableLayout
+        android:id="@+id/table"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_regis" >
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name: "
+                android:textSize="20sp"
+                android:layout_marginTop="20dp"/>
+            <EditText
+                android:id="@+id/edit_name"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:inputType="textShortMessage"
+                android:background="@drawable/edittext_border"
+                android:textSize="25sp"
+                android:hint=""
+                android:layout_marginTop="20dp"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gender:"
+                android:textSize="20sp"
+                android:layout_marginTop="20dp"/>
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="15dp">
+                <RadioButton
+                    android:id="@+id/male"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Male"
+                    android:textSize="20sp" />
+                <RadioButton
+                    android:id="@+id/female"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Female"
+                    android:textSize="20sp"/>
+            </RadioGroup>
+
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="E-mail: "
+                android:textSize="20sp" />
+            <EditText
+                android:id="@+id/edit_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:background="@drawable/edittext_border"
+                android:textSize="25sp"/>
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Salary: "
+                android:textSize="20sp"
+                android:layout_marginTop="20dp"/>
+            <EditText
+                android:id="@+id/edit_salary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/edittext_border"
+                android:textSize="25sp"/>
+        </TableRow>
+    </TableLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_regis"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:text="Send Data"
+        android:onClick="showResult"
+        android:layout_marginTop="30dp"
+        android:background="#3BFF3E"
+        android:layout_below="@id/table"
+        android:textAllCaps="false"
+        android:textSize="20sp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_reset"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:text="Reset"
+        android:onClick="resetData"
+        android:layout_below="@id/table"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:background="#F58696"
+        android:layout_toRightOf="@id/btn_regis"
+        android:textAllCaps="false"
+        android:textSize="20sp"/>
+</RelativeLayout >
